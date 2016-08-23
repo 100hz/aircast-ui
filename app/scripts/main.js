@@ -15,6 +15,7 @@ $(document).ready(function () {
 
     $.each( data, function( i, item ) {
       item.id = 'device' + i;
+      item.isFirst = i === 0;
       item.label = item.name.split('@').pop();
       $('#mixer-lanes').append(_.template(template)(item));
     });
