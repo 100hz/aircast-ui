@@ -1,0 +1,29 @@
+{
+  "name": "aircast-ui",
+  "version": "0.1.0",
+  "description": "Simple UI for aircast",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/100hz/aircast-ui.git"
+  },
+  "keywords": [
+    "music",
+    "audio",
+    "airplay",
+    "airtunes",
+    "sound",
+    "aircast",
+    "ui"
+  ],
+  "author": "Sebastian Krüger <sk@theblackestbox.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/100hz/aircast-ui/issues"
+  },
+  "homepage": "https://github.com/100hz/aircast-ui#readme",
+  "dependencies": {
+  }
+}
