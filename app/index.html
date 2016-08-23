@@ -28,46 +28,34 @@
     <![endif]-->
     
     <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <h6 class="foo">Volume</h6>
-
-          <!-- Volume control -->
-          <div class="widget-knob widget-volume">
-            <input type="text" value="77"  autocomplete="off" />
-          </div>
-          <!--/ Volume control -->
-          <div>
-          <div class="rowCheckbox checkbox-large">
-            <div class="custom-checkbox">
-              <input name="invoice" type="checkbox" checked="" id="invoice" value="invoice" hidefocus="true" class="gradient" style="outline: none;">
-              <label for="invoice" class="checked"></label>
-            </div>
-          </div>
-        </div>
+      <div class="row" id="mixer-lanes">
+        
+      </div>  
     </div>
+
+    <script id="mixer-lane" type="text/template">
+      <div class="col-xs-2">
+        <div class="checkbox-large">
+          <input name="<%= id %>-connect" type="checkbox" id="<%= id %>-connect" hidefocus="true" class="gradient" style="outline: none;">
+          <label for="<%= id %>-connect"></label>
+        </div>
+        <div class="scrollbar style2">
+          <p></p>
+        </div>
+      </div>
+    </script>
     
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/PixelKit-Bootstrap-UI-Kits/arctic-sunset/arctic-sunset-less/js/knobRot-0.2.2.js"></script>
-    <script src="/bower_components/PixelKit-Bootstrap-UI-Kits/arctic-sunset/arctic-sunset-less/js/jquery.customInput.js"></script>
+    <script src="/bower_components/PixelKit-Bootstrap-UI-Kits/dark-velvet/dark-velvet-less/js/knobRot-0.2.2.js"></script>
+    <script src="/bower_components/PixelKit-Bootstrap-UI-Kits/dark-velvet/dark-velvet-less/js/jquery.customInput.js"></script>
+    <script src="/bower_components/PixelKit-Bootstrap-UI-Kits/dark-velvet/dark-velvet-less/js/jquery.jscrollpane.min.js"></script>
+    <script src="/bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
     <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->

@@ -1,59 +1,21 @@
 $(document).ready(function () {
 
-  function touchHandler(event) {
-    var touches = event.changedTouches,
-      first = touches[0],
-      type = "";
-    switch (event.type) {
-    case "touchstart":
-      type = "mousedown";
-      break;
-    case "touchmove":
-      type = "mousemove";
-      break;
-    case "touchend":
-      type = "mouseup";
-      break;
-    default:
-      return;
-    }
+  $.getJSON('/api/devices')
+  .done(function(data) {
 
-    // initMouseEvent(type, canBubble, cancelable, view, clickCount, 
-    //                screenX, screenY, clientX, clientY, ctrlKey, 
-    //                altKey, shiftKey, metaKey, button, relatedTarget);
+    var template = $('#mixer-lane').html();
 
-    var simulatedEvent = document.createEvent("MouseEvent");
-    simulatedEvent.initMouseEvent(type, true, true, window, 1,
-      first.screenX, first.screenY,
-      first.clientX, first.clientY, false,
-      false, false, false, 0 /*left*/ , null);
+    $.each( data, function( i, item ) {
+      item.id = 'device' + i;
+      $('#mixer-lanes').append(_.template(template)(item));
+    });
 
-    first.target.dispatchEvent(simulatedEvent);
-    event.preventDefault();
-  }
+    $('input[type="checkbox"]').customInput();
 
-  function init() {
-    $('.widget-volume').on("touchstart", touchHandler);
-    $('.widget-volume').on("touchmove", touchHandler);
-    $('.widget-volume').on("touchend", touchHandler);
-    $('.widget-volume').on("touchcancel", touchHandler);
-  }
+    $('.scrollbar.style2').jScrollPane({
+      verticalDragMaxHeight: 36,
+      verticalDragMinHeight: 36
+    });
 
-
-  $('.widget-volume input').knobRot({
-    'classes': ['volume'],
-    'dragVertical': false,
-    'frameCount': 47,
-    'frameWidth': 114,
-    'frameHeight': 114,
-    'detent': true,
-    'detentThreshold': 5,
-    'minimumValue': 0,
-    'maximumValue': 100,
-    'hideInput': true
   });
-
-  $("input[type='checkbox']").customInput();
-
-  init();
 });

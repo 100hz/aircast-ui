@@ -27,15 +27,17 @@
   "overrides": {
     "PixelKit-Bootstrap-UI-Kits": {
       "main": [
-        "arctic-sunset/arctic-sunset-less/js/knobRot-0.2.2.js",
-        "arctic-sunset/arctic-sunset-less/js/jquery.customInput.js"
+        "dark-velvet/dark-velvet-less/js/knobRot-0.2.2.js",
+        "dark-velvet/dark-velvet-less/js/jquery.customInput.js",
+        "dark-velvet/dark-velvet-less/js/jquery.jscrollpane.min.js"
       ]
     }
   },
   "dependencies": {
     "PixelKit-Bootstrap-UI-Kits": "Pixelkit/PixelKit-Bootstrap-UI-Kits",
     "modernizr": "~2.8.1",
-    "jquery": "^3.1.0"
+    "jquery": "^3.1.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "chai": "^3.5.0",
