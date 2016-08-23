@@ -24,9 +24,18 @@
     "test",
     "tests"
   ],
+  "overrides": {
+    "PixelKit-Bootstrap-UI-Kits": {
+      "main": [
+        "dark-velvet/dark-velvet-less/js/knobRot-0.2.2.js",
+        "dark-velvet/dark-velvet-less/js/jquery.customInput.js"
+      ]
+    }
+  },
   "dependencies": {
     "PixelKit-Bootstrap-UI-Kits": "Pixelkit/PixelKit-Bootstrap-UI-Kits",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "jquery": "^3.1.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
