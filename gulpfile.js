@@ -13,7 +13,7 @@ gulp.task('styles', () => {
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.less({
-      paths: ['.', 'bower_components/PixelKit-Bootstrap-UI-Kits/dark-velvet/dark-velvet-less/less/']
+      paths: ['.', 'bower_components/PixelKit-Bootstrap-UI-Kits/arctic-sunset/arctic-sunset-less/less/']
     }))
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.sourcemaps.write())

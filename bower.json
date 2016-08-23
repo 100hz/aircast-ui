@@ -27,8 +27,8 @@
   "overrides": {
     "PixelKit-Bootstrap-UI-Kits": {
       "main": [
-        "dark-velvet/dark-velvet-less/js/knobRot-0.2.2.js",
-        "dark-velvet/dark-velvet-less/js/jquery.customInput.js"
+        "arctic-sunset/arctic-sunset-less/js/knobRot-0.2.2.js",
+        "arctic-sunset/arctic-sunset-less/js/jquery.customInput.js"
       ]
     }
   },

@@ -43,9 +43,9 @@ $(document).ready(function () {
   $('.widget-volume input').knobRot({
     'classes': ['volume'],
     'dragVertical': false,
-    'frameCount': 49,
-    'frameWidth': 149,
-    'frameHeight': 149,
+    'frameCount': 47,
+    'frameWidth': 114,
+    'frameHeight': 114,
     'detent': true,
     'detentThreshold': 5,
     'minimumValue': 0,
