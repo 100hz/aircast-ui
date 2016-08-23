@@ -1,0 +1,30 @@
+{
+  "name": "aircast-ui",
+  "description": "Simple UI for aircast",
+  "main": "",
+  "authors": [
+    "Sebastian Krüger <sk@theblackestbox.net>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "music",
+    "audio",
+    "airplay",
+    "airtunes",
+    "sound",
+    "aircast",
+    "ui"
+  ],
+  "homepage": "https://github.com/100hz/aircast-ui",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "PixelKit-Bootstrap-UI-Kits": "Pixelkit/PixelKit-Bootstrap-UI-Kits"
+  }
+}
