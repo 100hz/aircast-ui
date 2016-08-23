@@ -16,7 +16,11 @@ body {
 }
 .volume{background-image: url(../images/knob-volume.png);}
 
-.checkbox-large .custom-checkbox label {background:url(../images/styled_checkbox_large.png) no-repeat;}
+.checkbox-large .custom-checkbox label {
+    background: url(../images/styled_checkbox_large.png) no-repeat;
+    padding-left: 0px;
+    width: 62px;
+}
 
 .jspCap{
   background-image: url(../images/scrollbar.png);
@@ -28,6 +32,17 @@ body {
   background-image: url(../images/scrollbar.png);
 }
 
-.scrollbar p {
-	min-height: 400px;
+
+
+.scrollbar {
+  float: none;
+  margin: 0 auto;
+  p {
+    min-height: 400px;
+  }
+}
+
+.block-center {
+  display: table;
+  margin: 0 auto;
 }
