@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+  // Body Wrap
+  var screenHeight = $(window).height();
+  $('.body_wrap').css('min-height', screenHeight);
+  $(window).resize(function() {
+    screenHeight = $(window).height();
+    $('.body_wrap').css('min-height', screenHeight);
+  });
+
   $.getJSON('/api/devices')
   .done(function(data) {
 
@@ -7,6 +15,7 @@ $(document).ready(function () {
 
     $.each( data, function( i, item ) {
       item.id = 'device' + i;
+      item.label = item.name.split('@').pop();
       $('#mixer-lanes').append(_.template(template)(item));
     });
 

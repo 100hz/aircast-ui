@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>aircast ui</title>
+    <title>AircastUI</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -22,19 +22,26 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body touchstart="">
+  <body>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <div class="container">
-      <div class="row" id="mixer-lanes">
-        
-      </div>  
+    <div class="body_wrap gradient">
+      <div class="container typography">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <h1>AircastUI</h1>
+          </div>
+        </div>  
+        <div class="row" id="mixer-lanes">
+          
+        </div>  
+      </div>
     </div>
 
     <script id="mixer-lane" type="text/template">
-      <div class="col-xs-3">
+      <div class="col-xs-3 text-center mixer-lane">
+        <h6><%= label %></h6>
         <div class="checkbox-large block-center">
           <input name="<%= id %>-connect" type="checkbox" id="<%= id %>-connect" hidefocus="true" class="gradient" style="outline: none;">
           <label for="<%= id %>-connect"></label>

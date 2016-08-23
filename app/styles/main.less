@@ -4,6 +4,7 @@
 @import "checkboxes";
 @import "knobs";
 @import "scroll-bars";
+@import "typography";
 @import "variables";
 @import "mixins";
 
@@ -16,10 +17,16 @@ body {
 }
 .volume{background-image: url(../images/knob-volume.png);}
 
-.checkbox-large .custom-checkbox label {
+.checkbox-large {
+  padding: 15px 0 8px 0;
+
+  .custom-checkbox label {
     background: url(../images/styled_checkbox_large.png) no-repeat;
     padding-left: 0px;
-    width: 62px;
+    width: 65px;
+    margin: 0;
+    height: 31px;
+  }
 }
 
 .jspCap{
