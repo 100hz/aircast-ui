@@ -1,9 +1,5 @@
-#OSX
-.DS_Store
-
-#Node
 node_modules
-npm-debug.log
-
-#Bower
+dist
+.tmp
 bower_components
+test/bower_components

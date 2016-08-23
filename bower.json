@@ -25,6 +25,11 @@
     "tests"
   ],
   "dependencies": {
-    "PixelKit-Bootstrap-UI-Kits": "Pixelkit/PixelKit-Bootstrap-UI-Kits"
+    "PixelKit-Bootstrap-UI-Kits": "Pixelkit/PixelKit-Bootstrap-UI-Kits",
+    "modernizr": "~2.8.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
   }
 }
