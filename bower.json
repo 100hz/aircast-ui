@@ -25,11 +25,15 @@
     "tests"
   ],
   "overrides": {
-    "PixelKit-Bootstrap-UI-Kits": {
+    "nouislider": {
       "main": [
-        "dark-velvet/dark-velvet-less/js/knobRot-0.2.2.js",
-        "dark-velvet/dark-velvet-less/js/jquery.customInput.js",
-        "dark-velvet/dark-velvet-less/js/jquery.jscrollpane.min.js"
+        "distribute/nouislider.js",
+        "distribute/nouislider.min.css"
+      ]
+    },
+    "iCheck": {
+      "main": [
+        "icheck.js"
       ]
     }
   },
@@ -37,7 +41,9 @@
     "PixelKit-Bootstrap-UI-Kits": "Pixelkit/PixelKit-Bootstrap-UI-Kits",
     "modernizr": "~2.8.1",
     "jquery": "^3.1.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "nouislider": "^8.5.1",
+    "iCheck": "^1.0.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",

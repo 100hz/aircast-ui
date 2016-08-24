@@ -30,11 +30,13 @@ $(document).ready(function () {
       lane.appendTo(row);
 
       lane.find(':checkbox')
-      .customInput()
-      .change(function() {
+      .iCheck({
+        labelHover: false,
+        cursor: true
+      })
+      .on('ifToggled', function(event){
         var $el = $(this);
-        var connect = $el.prop('checked');
-
+        var connect = $el.is(':checked');
         $.ajax({
           url: '/api/devices/' + item.name + '/connect',
           type: 'PUT',
@@ -43,38 +45,35 @@ $(document).ready(function () {
           contentType: 'application/json; charset=utf-8'
         })
         .done(function (data) {
-          $el.prop('checked', data.connected)
-          .trigger('updateState');
+          $el.iCheck(data.connected === true ? 'check' : 'uncheck');
         });
       })
-      .prop('checked', item.connected)
-      .trigger('updateState');
+      .iCheck(item.connected === true ? 'check' : 'uncheck');
 
-      var lastVolume = item.volume;
-      lane.find('.scrollbar').jScrollPane({
-        verticalDragMaxHeight: 36,
-        verticalDragMinHeight: 36
-      })
-      .on('jsp-scroll-y', function(event, scrollPositionY, isAtTop, isAtBottom){
-        var $el = $(this);
-        var newVolume = Math.round((1 - $el.data('jsp').getPercentScrolledY()) * 100);
-        if (newVolume === lastVolume) {
-          return;
+      var scrollbar = lane.find('.scrollbar').get(0);
+
+      noUiSlider.create(scrollbar, {
+        start: 100 - item.volume,
+        step: 1,
+        orientation: 'vertical',
+        connect: 'lower',
+        range: {
+          'min': 0,
+          'max': 100
         }
-
+      });
+      scrollbar.noUiSlider.on('change', function(){
         $.ajax({
           url: '/api/devices/' + item.name + '/volume',
           type: 'PUT',
-          data: JSON.stringify({volume: newVolume}),
+          data: JSON.stringify({volume: 100 - scrollbar.noUiSlider.get()}),
           dataType: 'json',
           contentType: 'application/json; charset=utf-8'
         })
         .done(function (data) {
-          lastVolume = data.volume;
-          $el.data('jsp').scrollToPercentY((100 - lastVolume) / 100);
+          scrollbar.noUiSlider.set(100 - data.volume);
         });
-
-      }).data('jsp').scrollToPercentY((100 - lastVolume) / 100);
+      });
     });
   });
 });

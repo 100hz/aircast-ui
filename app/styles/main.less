@@ -1,9 +1,7 @@
 @import "bootstrap/bootstrap";
 @import "reset";
 @import "general";
-@import "checkboxes";
 @import "knobs";
-@import "scroll-bars";
 @import "typography";
 @import "variables";
 @import "mixins";
@@ -17,42 +15,110 @@ body {
 }
 .volume{background-image: url(../images/knob-volume.png);}
 
-.checkbox-large {
-  padding: 15px 0 8px 0;
+.icheckbox {
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+  margin-top: 25px;
+  padding: 0;
+  width: 65px;
+  height: 32px;
+  background: url(../images/styled_checkbox_large.png) no-repeat;
+  border: none;
+  cursor: pointer;
+  background-position: 0 0;
 
-  .custom-checkbox label {
-    background: url(../images/styled_checkbox_large.png) no-repeat;
-    padding-left: 0px;
-    width: 65px;
-    margin: 0;
-    height: 31px;
+  &.checked {
+    background-position: 0 -100px;
   }
 }
 
-.jspCap{
-  background-image: url(../images/scrollbar.png);
-}
-.jspTrack{
-  background-image: url(../images/scrollbar.png);
-}
-.jspDrag{
-  background-image: url(../images/scrollbar.png);
-}
-
-.ribbon{
-  background-image:url(../images/ribbons.png);
-}
-.ribbon span{
-  background-image:url(../images/ribbons.png);
-}
-
-
-
 .scrollbar {
-  float: none;
-  margin: 0 auto;
-  p {
-    min-height: 400px;
+  height: 182px;
+  background: none;
+  box-shadow: none;
+  border: 0;
+  background-image: url(../images/scrollbar.png);
+  background-repeat: repeat-y;
+  width: 18px;
+  background-position: -148px 0;
+
+  .noUi-base {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    height: auto;
+  }
+
+  .noUi-base:before {
+    background: #121416;
+    position: absolute;
+    top: -15px;
+    bottom: 0;
+    left: 6px;
+    width: 4px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    content: "";
+  }
+
+  .noUi-origin {
+    background: none;
+    box-shadow: none;
+    background-image: url(../images/scrollbar.png);
+    background-repeat: repeat-y;
+    width:18px;
+    background-position: -148px 0;
+  }
+
+  &:before {
+    background-image: url(../images/scrollbar.png);
+    background-repeat: no-repeat;
+
+    background-position: -180px 0;
+    left: 0px;
+    width: 18px;
+    height: 9px;
+    content: "";
+    position: absolute;
+    top: -8px;
+  }
+
+  &:after {
+    background-image: url(../images/scrollbar.png);
+    background-repeat: no-repeat;
+    background-position: -180px -9px;
+    left: 0px;
+    width: 18px;
+    height: 9px;
+    content: "";
+    position: absolute;
+    bottom: -8px;
+  }
+
+  .noUi-handle {
+    background: none;
+    background-image: url(../images/scrollbar.png);
+    background-repeat: no-repeat;
+    position: relative;
+    top: -17px;
+    z-index: 2;
+    background-position: -114px 0;
+    width: 20px;
+    left: -2px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+    border: 0;
+  }
+
+  .noUi-handle:after, .noUi-handle:before {
+    background: none;
+
   }
 }
 

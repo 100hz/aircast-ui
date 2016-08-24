@@ -11,6 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/nouislider/distribute/nouislider.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -47,10 +48,8 @@
     <script id="mixer-lane" type="text/template">
       <div class="col-xs-3 col-sm-2 <% if(isFirst === true) print('col-sm-offset-2'); %> text-center mixer-lane">
         <h6 class="foo"><%= label %></h6>
-        <div class="scrollbar style2">
-          <p></p>
-        </div>
-        <div class="checkbox-large block-center">
+        <div class="scrollbar block-center"></div>
+        <div class="block-center">
           <input name="<%= id %>-connect" type="checkbox" id="<%= id %>-connect" hidefocus="true" class="gradient" style="outline: none;">
           <label for="<%= id %>-connect"></label>
         </div>
@@ -60,10 +59,9 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/PixelKit-Bootstrap-UI-Kits/dark-velvet/dark-velvet-less/js/knobRot-0.2.2.js"></script>
-    <script src="/bower_components/PixelKit-Bootstrap-UI-Kits/dark-velvet/dark-velvet-less/js/jquery.customInput.js"></script>
-    <script src="/bower_components/PixelKit-Bootstrap-UI-Kits/dark-velvet/dark-velvet-less/js/jquery.jscrollpane.min.js"></script>
     <script src="/bower_components/underscore/underscore.js"></script>
+    <script src="/bower_components/nouislider/distribute/nouislider.js"></script>
+    <script src="/bower_components/iCheck/icheck.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
